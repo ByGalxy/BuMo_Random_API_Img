@@ -81,7 +81,7 @@ CATEGORIES = {
 
 Then add the newly created category to the directory. For example, if I want to create Honkai3, I can refer to the way the Honkai_Star_Rail directory was created.
 
-# 中文
+# 简体中文
 此代码为布莫网站的demo模板，此模板作为旧版公开
 
 ## 使用教程
