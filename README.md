@@ -23,7 +23,7 @@ For example:
 - Add landscape images to h
 - Add portrait images to s
 
-## Previewing the Running Effect
+### Previewing the Running Effect
 
 It should look like this when I run it normally.
 
@@ -57,7 +57,7 @@ Or
 
 s directory: `<url id="cvcorusr4djjmg1jvbfg" type="url" status="failed" title="" wc="0">http://127.0.0.1:5000/random_image/</url> Honkai Star Rail?hsp=s`
 
-## Adding More Categories
+### Adding More Categories
 
 This template code allows you to add more category directories.
 
@@ -102,7 +102,7 @@ pip install flask
  - 横屏图片添加到h
  - 竖屏图片添加到s
 
-## 预览运行效果
+### 预览运行效果
 
 我正常运行后是这样的
 
@@ -136,7 +136,7 @@ Press CTRL+C to quit
 
 `s`目录：`http://127.0.0.1:5000/random_image/崩坏星穹铁道?hsp=s`
 
-## 添加更多分类
+### 添加更多分类
 
 这个模板代码可以添加更多分类目录
 
