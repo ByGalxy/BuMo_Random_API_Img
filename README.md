@@ -1,5 +1,8 @@
+以下内容使用AI翻译
+The following was translated using AI
+
 # English
-Kimi: This code is the demo template for the Bumo website and is made public as the old version.
+This code is the demo template for the Bumo website and is made public as the old version.
 
 ## Usage Instructions
 
