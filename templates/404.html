@@ -1,196 +1,26 @@
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>二次元404</title>
-    <script src="./static/gsap/3.12.2/gsap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - 图片未找到</title>
     <style>
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
-            height: 100vh;
-            overflow: hidden;
-            font-family: 'Comic Sans MS', cursive;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            padding: 20px;
-            overflow: hidden;
-        }
-
-        /* 新角色样式 */
-        .anime-character {
-            width: 300px;
-            height: 400px;
-            position: relative;
-            transform-origin: center bottom;
-        }
-
-        .message {
-            color: white;
+            font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 2em;
+            margin: 50px;
         }
-
         h1 {
-            font-size: 4em;
-            text-shadow: 3px 3px 0 #ff69b4;
+            color: #ff4c4c;
         }
-
         p {
-            font-size: 1.5em;
-            margin: 1em 0;
-        }
-
-        .button {
-            background: #ff69b4;
-            color: white;
-            padding: 1em 2em;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .stars span {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background: white;
-            border-radius: 50%;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="anime-character">
-            <img src="./static/404.png"
-                 alt="动漫角色"
-                 class="character-img" style="width: 100%;">
-        </div>
-        
-        <div class="message">
-            <h1>404</h1>
-            <p>哎呀～页面被次元吞噬啦！</p>
-            <div class="button">返回主页</div>
-        </div>
-
-        <div class="stars">
-            <!-- 通过GSAP动态添加星星 -->
-        </div>
-    </div>
-
-    <script>
-        // 角色浮动动画
-        const tl = gsap.timeline({ repeat: -1, yoyo: true });
-        tl.to(".anime-character", {
-            y: -15,  // 减少浮动幅度
-            duration: 1.5,
-            ease: "power1.inOut",
-            rotation: -2
-        });
-
-        // 角色呼吸效果
-        gsap.to(".character-img", {
-            scale: 1.02,
-            duration: 2,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut"
-        });
-
-        // 文字动画（保持原有）
-        gsap.from("h1", {
-            scale: 0,
-            rotation: 360,
-            duration: 1,
-            ease: "elastic.out(1, 0.3)"
-        });
-
-        gsap.from("p", {
-            x: -100,
-            opacity: 0,
-            duration: 1,
-            delay: 0.5
-        });
-
-        // 按钮动画（保持原有）
-        gsap.from(".button", {
-            background: "#a777e3",
-            scale: 0,
-            duration: 1,
-            ease: "bounce.out"
-        });
-
-        // 窗口大小变化时调整布局
-        function adjustLayout() {
-            const windowHeight = window.innerHeight;
-            const character = document.querySelector('.anime-character');
-            
-            if (windowHeight < 700) {
-                character.style.maxWidth = '300px';
-                gsap.set(".anime-character", { marginTop: "-30px" });
-            } else {
-                character.style.maxWidth = '500px';
-                gsap.set(".anime-character", { marginTop: "-50px" });
-            }
-        }
-
-        // 创建星星特效（保持原有）
-        function createStars() {
-            const stars = document.querySelector('.stars');
-            for(let i = 0; i < 20; i++) {
-                const star = document.createElement('span');
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                stars.appendChild(star);
-                
-                gsap.to(star, {
-                    opacity: 0,
-                    scale: 0,
-                    duration: 1,
-                    repeat: -1,
-                    yoyo: true,
-                    delay: Math.random() * 2
-                });
-            }
-        }
-        createStars();
-
-        // 增强版鼠标跟随特效
-        document.addEventListener('mousemove', (e) => {
-            const x = (e.clientX - window.innerWidth/2) * 0.05;
-            const y = (e.clientY - window.innerHeight/2) * 0.05;
-            
-            gsap.to(".anime-character", {
-                x: x,
-                y: y + 10, // 增加垂直偏移量
-                rotation: x * 0.5, // 根据X轴位置旋转
-                duration: 1.2,
-                ease: "power2.out"
-            });
-        });
-
-        // 添加点击特效
-        document.querySelector('.button').addEventListener('click', () => {
-            gsap.to(".container", {
-                opacity: 0,
-                duration: 0.5,
-                onComplete: () => {
-                    window.location.href = '/';
-                }
-            });
-        });
-    </script>
+    <h1>404 - 图片未找到</h1>
+    <p>抱歉，我们无法找到该类别的图片，请稍后再试！</p>
 </body>
 </html>
