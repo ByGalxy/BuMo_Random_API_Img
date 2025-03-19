@@ -2,8 +2,6 @@
 
 简体中文 | [English](README_en.md) 
 
-此代码为布莫网站的demo模板，此模板作为旧版公开
-
 ## 使用教程
 
 需要下载python，然后下载flask库
